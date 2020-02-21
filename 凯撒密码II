@@ -1,0 +1,22 @@
+yuanwen = list(input())
+miwen = []
+for i in range(len(yuanwen)):
+    if yuanwen[i].islower():
+        if ord(yuanwen[i])<120:#a-z的ASCII码值在97-122
+            k = chr(ord(yuanwen[i])+3)
+            miwen.append(k)
+        else:
+            k = chr(ord(yuanwen[i])+3-26)
+            miwen.append(k)
+    elif yuanwen[i].isupper():#A-Z的ASCII码值在65-90
+        if ord(yuanwen[i])<88:
+            k = chr(ord(yuanwen[i])+3)
+            miwen.append(k)
+        else:
+            k = chr(ord(yuanwen[i])+3-26)
+            miwen.append(k)            
+    else:
+        k = yuanwen[i]
+        miwen.append(k)
+
+print("".join(miwen))
