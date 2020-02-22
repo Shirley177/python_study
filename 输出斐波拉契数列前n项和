@@ -1,0 +1,20 @@
+#如下请定义一个名为fib()的函数，在函数中输出非波那契数的前n项（若n<=0，则输出Error）
+def fib(n):
+    #你需要完善fib函数
+    num1 = 0
+    num2 = 1
+    if n<=0:
+        print('Error')
+    elif n==1:
+        print(0)
+    elif n>=2:
+        print(0)
+        print(1)
+        for i in range(2,n):
+            num = num1 + num2
+            num1 = num2
+            num2 = num
+            print(num)
+
+n=int(input()) #int函数将input()接收到的字符串转成整数
+fib(n)#调用fib()函数计算并打印fibonacci数列前n项
