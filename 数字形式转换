@@ -1,0 +1,7 @@
+chinese = ['零','一','二','三','四','五','六','七','八','九']
+s = list(input())
+t = []
+for i in range(len(s)):
+    a = int(s[i])
+    t.append(chinese[a])
+print(''.join(t))
