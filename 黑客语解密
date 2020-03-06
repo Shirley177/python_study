@@ -1,0 +1,6 @@
+s = input()
+num = '0134567'
+c = 'oieasgt'
+table = ''.maketrans(num,c)
+for i in range(len(s)):
+    print(s[i].translate(table), end = '')
