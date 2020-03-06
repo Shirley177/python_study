@@ -1,0 +1,25 @@
+import string
+s = input()
+n =len(s)
+m = digit = low = up = p = 0
+for i in range(n):
+    if s[i] in string.digits:
+        digit = 1
+    elif s[i] in string.ascii_lowercase:
+        low = 1
+    elif s[i] in string.ascii_uppercase:
+        up = 1
+    elif s[i] in string.punctuation:
+        p = 1
+if n < 8:
+    m = 0
+else:
+    m = digit+low+up+p   
+if m < 2:
+    print('弱')
+elif m == 2:
+    print('中')
+elif m == 3:
+    print('强')
+elif m == 4:
+    print('极强')
