@@ -1,0 +1,20 @@
+def f(x):
+    f = x**5-15*(x**4)+85*(x**3)-225*(x**2)+274*x-121
+    return f
+    
+left = 1.5
+right = 2.4
+x = (1.5+2.4)/2
+while True:
+    if f(x)>0:
+        left = x
+        right = right
+    elif f(x)<0:
+        left = left
+        right = x
+    x = (left+right)/2
+    if abs(f(x))<0.0000005:
+        print('{:.6f}'.format(x))
+        break
+    
+        
